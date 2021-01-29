@@ -1,0 +1,24 @@
+//default font
+$font-base: 'Work Sans', sans-serif;
+$font-writer: 'Zilla Slab', sans-serif;
+
+//default colors
+$primary-color: #FEC5D6;
+$primary-color-light: lighten($primary-color, 20%);
+$primary-color-light-10: lighten($primary-color, 10%);
+$primary-color-dark:  darken($primary-color, 10%);
+
+$secondary-color: #CBAFD5;
+$secondary-color-light: lighten($secondary-color, 20%);
+$secondary-color-light-10: lighten($secondary-color, 10%);
+$secondary-color-dark: #B79EBE;
+
+$black-color: #5C5C5C;
+$gray-color: #757575;
+$gray-color-light: #dadada;
+
+// media queries utility
+$max-width-laptop: 1460px;
+$max-width-laptop-small: 1366px;
+$max-width-tablet: 800px;
+$max-width-mobile: 500px;

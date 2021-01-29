@@ -1,0 +1,27 @@
+@import '~Styles/theme';
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 24px;
+  font-weight: 800;
+  color: #fff;
+
+  ul {
+    display: flex;
+    width: 500px;
+    height: 40px;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+
+    li {
+      &:hover {
+        background-color: $secondary-color-dark;
+        padding: 8px 16px;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}

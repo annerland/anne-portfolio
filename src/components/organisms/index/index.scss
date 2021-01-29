@@ -1,0 +1,96 @@
+@import '~Styles/theme';
+@import '~Styles/animations';
+
+.index-container {
+  background: transparent linear-gradient(180deg, $secondary-color 0%, $primary-color 100%) 0% 0% no-repeat padding-box;
+  height: 1080px;
+  position: relative;
+
+  .stars-container {
+    height: 150px;
+    display: grid;
+    padding: 0 0 0 52px;
+    justify-content: center;
+    grid-template-columns: 315px 474px 310px 339px 315px;
+    grid-template-rows: 36% 100px 73px;
+    grid-template-areas:
+        "top1 top2 top3 top4 top5"
+        "mid1 mid2 mid3 mid4 mid5"
+        "bottom1 bottom2 bottom3 bottom4 bottom5";
+
+    img {
+      opacity: 0.4;
+      height: 14px;
+    }
+
+    .star-two {
+      grid-area: bottom1;
+      align-self: center;
+    }
+
+    .star-three {
+      grid-area: mid1;
+      justify-self: end;
+      align-self: center;
+    }
+
+    .star-four {
+      grid-area: bottom2;
+      justify-self: center;
+    }
+
+    .star-five {
+      grid-area: top3;
+    }
+
+    .star-six {
+      grid-area: bottom3;
+      justify-self: center;
+    }
+
+    .star-seven {
+      grid-area: mid4;
+    }
+
+    .star-eight {
+      grid-area: bottom4;
+      justify-self: end;
+      align-self: center;
+    }
+
+    .star-nine {
+      grid-area: top5;
+      justify-self: center;
+    }
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 100px;
+    position: relative;
+    top: 250px;
+    color: white;
+    font-weight: 100;
+    font-family: $font-writer;
+    letter-spacing: 8px;
+    overflow: hidden; 
+    white-space: nowrap; 
+    margin: 0 auto;
+    width: fit-content;
+    animation: 
+      typing 3.5s steps(30, end);
+  
+    span {
+      font-family: $font-writer;
+      font-weight: 900;
+    }
+
+    .underline {
+      animation: blink 1s infinite;
+    }
+  }
+
+  ::selection{
+    background: $secondary-color;
+  }
+}
