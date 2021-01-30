@@ -1,10 +1,41 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import NavBar from 'Components/atoms/navBar'
-import Star from 'Assets/icons/star.svg'
+import StarSVG from 'Assets/icons/star.svg'
+import CloudSVG from 'Assets/icons/cloud.svg'
 
 import './index.scss'
 
+class Star {
+  constructor () {
+    this.x = Math.random() * 100
+    this.y = Math.random() * 100
+  }
+
+  getStyle () {
+    return {
+      left: `${this.x}%`,
+      top: `${this.y}%`
+    }
+  }
+}
+
+const generateStars = (starsCount) => {
+  const array = []
+
+  for (let i = 0; i < starsCount; i++) {
+    array.push(new Star())
+  }
+
+  return array
+}
+
 const Index = () => {
+  const [star, setStar] = useState([])
+
+  useEffect(() => {
+    setStar(generateStars(60))
+  }, [])
+
   return (
     <div className='index-container'>
       <NavBar />
@@ -13,17 +44,11 @@ const Index = () => {
         <span className='underline'>_</span>
       </h1>
 
-      <div className='stars-container'>
-        <img className='star-one' src={Star} />
-        <img className='star-two' src={Star} />
-        <img className='star-three' src={Star} />
-        <img className='star-four' src={Star} />
-        <img className='star-five' src={Star} />
-        <img className='star-six' src={Star} />
-        <img className='star-seven' src={Star} />
-        <img className='star-eight' src={Star} />
-        <img className='star-nine' src={Star} />
-      </div>
+      {star.map((elm, i) => {
+        return (
+          <img src={StarSVG} style={elm.getStyle()} key={i} />
+        )
+      })}
     </div>
   )
 }
