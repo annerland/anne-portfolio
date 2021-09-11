@@ -19,10 +19,10 @@ class Star {
   }
 }
 
-const generateStars = (starsCount) => {
+const generate = (count) => {
   const array = []
 
-  for (let i = 0; i < starsCount; i++) {
+  for (let i = 0; i < count; i++) {
     array.push(new Star())
   }
 
@@ -31,9 +31,11 @@ const generateStars = (starsCount) => {
 
 const Index = () => {
   const [star, setStar] = useState([])
+  const [cloud, setCloud] = useState([])
 
   useEffect(() => {
-    setStar(generateStars(60))
+    setStar(generate(60))
+    setCloud(generate(4))
   }, [])
 
   return (
@@ -44,9 +46,17 @@ const Index = () => {
         <span className='underline'>_</span>
       </h1>
 
+      <div className='cloud-container'>
+        {cloud.map((elm, i) => {
+          return (
+            <img src={CloudSVG} className='cloud' style={elm.getStyle()} key={i} />
+          )
+        })}
+      </div>
+
       {star.map((elm, i) => {
         return (
-          <img src={StarSVG} style={elm.getStyle()} key={i} />
+          <img src={StarSVG} className='star' style={elm.getStyle()} key={i} />
         )
       })}
     </div>

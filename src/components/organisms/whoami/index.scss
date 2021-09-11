@@ -1,0 +1,66 @@
+@import '~Styles/theme';
+
+.whoami-container {
+  margin: 72px 0;
+  height: 400px;
+  display: flex;
+  justify-content: space-evenly;
+
+  .image-container {
+    height: 400px;
+    width: 300px;
+    position: relative;
+    background: url('/src/assets/images/me.jpg');
+    background-size: 100%;
+    background-color: rgb(66, 66, 66);
+    border-radius: 2px;
+    margin: 0 48px;
+
+    .purple-square {
+      height: 105px;
+      width: 185px;
+      border-radius: 4px;
+      position: absolute;
+      right: -81px;
+      top: 48px;
+      z-index: -1;
+      background-color: $secondary-color;
+    }
+
+    .pink-square {
+      height: 105px;
+      width: 185px;
+      border-radius: 4px;
+      bottom: -30px;
+      left: -69px;
+      position: absolute;
+      background-color: $primary-color;
+    }
+  }
+
+  .content {
+    h1 {
+      font-size: 32px;
+      color: $black-color;
+      margin-bottom: 28px;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 512px;
+        bottom: -1px;
+        height: 16px;
+        background-color: $primary-color-light;
+      }
+    }
+
+    p {
+      width: 522px;
+      line-height: 1.5;
+      font-size: 20px;
+      color: $black-color;
+    }
+  }
+}

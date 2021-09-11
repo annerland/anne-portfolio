@@ -1,0 +1,40 @@
+
+.card-container {
+  width: 748px;
+  height: 840px;
+  border-radius: 8px;
+  box-shadow: 8px 8px 15px #00000029;
+  margin-bottom: 52px;
+
+  header {
+    color: #5c5c5c;
+    padding: 16px;
+
+    h2 {
+      font-size: 32px;
+    }
+  }
+
+  section {
+    p {
+      color: #5c5c5c;
+      padding: 8px 16px;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    img {
+      width: 748px;
+    }
+  }
+
+  footer {
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      width: 42px;
+      margin: 0 16px;
+    }
+  }
+}

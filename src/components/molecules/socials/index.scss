@@ -1,0 +1,38 @@
+@import '~Styles/theme';
+
+.socials-container {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 32px;
+    color: $black-color;
+    position: relative;
+    margin-bottom: 52px;
+    text-align: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      width: 384px;
+      bottom: -1px;
+      height: 16px;
+      background-color: $primary-color-light;
+    }
+  }
+
+  .socials-content {
+    width: 386px;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      height: 40px;
+      cursor: pointer;
+    }
+  }
+}

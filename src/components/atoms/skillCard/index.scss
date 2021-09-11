@@ -1,0 +1,31 @@
+@import '~Styles/theme';
+
+.skill-card-container {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #fbebef;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0.8;
+  transition: 500ms;
+  justify-content: space-between;
+
+  &:hover {
+    opacity: 1;
+    box-shadow: 8px 8px 24px #b39abc;
+  }
+
+  p {
+    font-size: 24px;
+    padding: 24px 16px;
+    font-weight: 600;
+    color: $black-color;
+  }
+
+  img {
+    width: 40px;
+    display: flex;
+    margin: 0 16px 16px auto;
+  }
+}

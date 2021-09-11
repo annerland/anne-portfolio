@@ -1,0 +1,14 @@
+@import '~Styles/theme';
+
+.banner-container {
+  height: 290px;
+  background: transparent linear-gradient(180deg, $secondary-color 0%, $primary-color 100%) 0% 0% no-repeat padding-box;
+  position: relative;
+
+  img {
+    position: absolute;
+    height: 408px;
+    top: -101px;
+    left: 180px;
+  }
+}

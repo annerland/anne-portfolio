@@ -3,15 +3,25 @@
 
 .index-container {
   background: transparent linear-gradient(180deg, $secondary-color 0%, $primary-color 100%) 0% 0% no-repeat padding-box;
-  height: 1080px;
+  height: 960px;
   position: relative;
 
-  img {
+  .star {
     position: absolute;
     opacity: 0.4;
     height: 14px;
   }
-  
+
+  .cloud-container {
+    height: 340px;
+    position: relative;
+
+    .cloud {
+      position: absolute;
+      opacity: 0.4;
+      height: 100px;
+    }
+  }
 
   h1 {
     text-align: center;
@@ -22,13 +32,12 @@
     font-weight: 100;
     font-family: $font-writer;
     letter-spacing: 8px;
-    overflow: hidden; 
-    white-space: nowrap; 
+    overflow: hidden;
+    white-space: nowrap;
     margin: 0 auto;
     width: fit-content;
-    animation: 
-      typing 3.5s steps(30, end);
-  
+    animation: typing 3.5s steps(30, end);
+
     span {
       font-family: $font-writer;
       font-weight: 900;
@@ -39,7 +48,7 @@
     }
   }
 
-  ::selection{
+  ::selection {
     background: $secondary-color;
   }
 }

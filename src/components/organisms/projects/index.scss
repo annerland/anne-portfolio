@@ -1,0 +1,51 @@
+@import '~Styles/theme';
+
+.projects-container {
+  margin: 72px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  .cards-content {
+    display: grid;
+    grid-template-columns: 30px 1fr 1fr;
+    grid-template-rows: 200px 200px 523px 200px;
+    grid-gap: 0 80px;
+  }
+
+  .card-container {
+    grid-column: 2;
+  }
+
+  .card-container:nth-child(2) {
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  .card-container:nth-child(3) {
+    grid-row: 4;
+  }
+
+  .card-container:nth-child(4) {
+    grid-row: 5;
+    grid-column: 3;
+  }
+
+  h1 {
+    font-size: 32px;
+    margin-bottom: 72px;
+    color: $black-color;
+    position: relative;
+    text-align: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      width: 130px;
+      bottom: -1px;
+      height: 16px;
+      background-color: $primary-color-light;
+    }
+  }
+}

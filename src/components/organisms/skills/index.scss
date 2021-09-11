@@ -1,0 +1,31 @@
+@import '~Styles/theme';
+
+.skills-container {
+  margin: 72px 0;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  h1 {
+    font-size: 32px;
+    color: $black-color;
+    position: relative;
+    text-align: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      width: 88px;
+      bottom: -1px;
+      height: 16px;
+      background-color: $primary-color-light;
+    }
+  }
+
+  .skills-content {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
